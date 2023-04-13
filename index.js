@@ -1,3 +1,5 @@
+// const { transform } = require("babel-core");
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -12,5 +14,15 @@ const tutorials = [
 ];
 
 const titleCased = () => {
+  tutorials.map(tutorial => {
+    const words = tutorial.split('');
+    const capitalizedWords = words.map(word => {
+      word.charAt(0).toUpperCase() + word.slice(1);
+    })
+   capitalizedWords.join('')
+  })
+  
   return tutorials
 }
+
+console.log(titleCased())
